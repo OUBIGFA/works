@@ -30,7 +30,31 @@
     }
 
     /************* 顶部导航区域 *************/
-/* 此部分未修改 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+    nav li {
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+    }
+    nav .email-link {
+      font-weight: bold;
+      color: #ee3b36; /* 设置颜色 */
+    }
 
     /************* 第一屏：人物名称与介绍 *************/
     .main-section {
@@ -57,6 +81,7 @@
       font-weight: normal;
     }
 
+    /* introduction 区块 */
     .introduction, .contact-info {
       margin-top: 40px;
       text-align: left;
@@ -76,7 +101,7 @@
       line-height: 1.8;
       color: #333;
     }
-
+    /* Instagram 链接 */
     .instagram-link {
       position: absolute;
       top: 0;
@@ -89,71 +114,62 @@
     /************* 作品集图片展示 *************/
     .image-gallery {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 50px;
+      flex-direction: column; /* 垂直排列 */
+      align-items: center; /* 居中对齐 */
+      justify-content: flex-start;
+      gap: 50px; /* 控制每个项目之间的间隔 */
       padding: 50px 10%;
       background-color: #f9f9f9;
     }
     
-    /* 项目容器 */
-    .project {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 1000px;
-      gap: 30px;
-      justify-content: center;  /* 确保整体居中 */
-    }
-
-    /* 项目标题样式 */
-    .project-title {
-      width: 100%;
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    /* 四图排列样式 */
-    .four-images {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-    }
-    
-    /* 通用图片样式 */
     .image-gallery img {
       width: 250px;
       height: 250px;
       object-fit: cover;
       border-radius: 8px;
     }
-
-    /* 左右布局容器 */
-    .images-container {
+    
+    /* 每个项目的容器 */
+    .project {
       display: flex;
-      gap: 30px;
+      justify-content: center; /* 水平居中对齐 */
+      align-items: flex-start; /* 上对齐 */
       width: 100%;
-      justify-content: center;
+      max-width: 1000px; /* 设置最大宽度 */
+      gap: 30px; /* 控制大图与小图之间的间隔 */
     }
-
-    /* 大图样式 */
-    .big-image {
-      width: 520px;  /* 修改了尺寸 */
-      height: 520px; /* 修改了尺寸 */
+    
+    /* 左侧的大图样式 */
+    .project-images-left .big-image {
+      width: 510px;
+      height: 510px;
       object-fit: cover;
       border-radius: 8px;
     }
 
-    /* 小图列布局 */
-    .small-images-column {
+    /* 右侧的小图区域 */
+    .project-images-right {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      justify-content: space-between; /* 上下间隔均匀 */
+      gap: 20px; /* 控制小图之间的间隔 */
+      max-width: 250px; /* 设置小图的最大宽度 */
     }
+
+    /* 小图的样式 */
+    .small-image {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* 小图行的布局 */
+    .row {
+      display: flex;
+      justify-content: space-between; /* 水平间隔均匀 */
+      gap: 20px; /* 小图之间的间隔 */
+    }      
 
     /************* 作品集视频展示 *************/
     .video-gallery {
@@ -182,14 +198,14 @@
       color: #999;
     }
 
-    /* 联系方式样式 */
+    /* 设置联系方式间的竖线样式 */
     .contact-info-content p {
       display: flex;
       align-items: center;
       font-size: 14px;
     }
     .contact-info-content p img {
-      margin-right: 10px;
+      margin-right: 10px; /* 图标与文本间距 */
     }
     .contact-info-content p span {
       margin-left: 10px;
@@ -210,6 +226,7 @@
         <li>点击邮箱联系</li>
         <li>
           <a class="email-link" href="mailto:ouhuayang@outlook.com" target="_blank">
+            <!-- Email 链接按钮 -->
             <img src="https://r2u.469821.xyz/mail-ai-fill.png" alt="Email Icon" style="vertical-align:middle; width:20px; height:20px;"> Email
           </a>
         </li>
@@ -255,70 +272,87 @@
 
   <!-- 第二屏：作品集图片展示 -->
   <section class="image-gallery">
-    <!-- 项目一 -->
     <div class="project">
       <div class="project-title">项目一</div>
-      <div class="images-container">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="大图1" class="big-image">
-        <div class="small-images-column">
-          <div class="row">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图1">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图2">
-          </div>
-          <div class="row">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图3">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图4">
-          </div>
-        </div>
+      <div class="project-separator"></div>
+      <!-- 左边的大图 -->
+      <div class="project-images-left">
+       <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="大图1" class="big-image">
+      </div>
+      <!-- 右边的小图 -->
+      <div class="project-images-right">
+      <div class="row">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图1" class="small-image">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图2" class="small-image">
+      </div>
+      <div class="row">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图3" class="small-image">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图4" class="small-image">
       </div>
     </div>
+  </div>
 
-    <!-- 项目二 -->
     <div class="project">
       <div class="project-title">项目二</div>
-      <div class="images-container">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="大图1" class="big-image">
-        <div class="small-images-column">
-          <div class="row">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图1">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图2">
-          </div>
-          <div class="row">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图3">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图4">
-          </div>
-        </div>
+      <div class="project-separator"></div>
+      <!-- 左边的大图 -->
+      <div class="project-images-left">
+       <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="大图1" class="big-image">
+      </div>
+      <!-- 右边的小图 -->
+      <div class="project-images-right">
+      <div class="row">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图1" class="small-image">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图2" class="small-image">
+      </div>
+      <div class="row">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图3" class="small-image">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图4" class="small-image">
       </div>
     </div>
+  </div>
 
-    <!-- 项目三 -->
     <div class="project">
       <div class="project-title">项目三</div>
-      <div class="images-container">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="大图1" class="big-image">
-        <div class="small-images-column">
-          <div class="row">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图1">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图2">
-          </div>
-          <div class="row">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图3">
-            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图4">
-          </div>
-        </div>
+      <div class="project-separator"></div>
+      <!-- 左边的大图 -->
+      <div class="project-images-left">
+       <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="大图1" class="big-image">
+      </div>
+      <!-- 右边的小图 -->
+      <div class="project-images-right">
+      <div class="row">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图1" class="small-image">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图2" class="small-image">
+      </div>
+      <div class="row">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图3" class="small-image">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图4" class="small-image">
       </div>
     </div>
+  </div>
 
-    <!-- 项目四 -->
     <div class="project">
       <div class="project-title">项目四</div>
-      <div class="four-images">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="图片1">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="图片2">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="图片3">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="图片4">
+      <div class="project-separator"></div>
+      <!-- 左边的大图 -->
+      <div class="project-images-left">
+       <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="大图1" class="big-image">
+      </div>
+      <!-- 右边的小图 -->
+      <div class="project-images-right">
+      <div class="row">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图1" class="small-image">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图2" class="small-image">
+      </div>
+      <div class="row">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图3" class="small-image">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图4" class="small-image">
       </div>
     </div>
+  </div>
+    
+    <!-- 继续添加其他项目 -->
   </section>
 
   <!-- 第三屏：作品集视频展示 -->
@@ -335,3 +369,10 @@
 
 </body>
 </html>
+
+
+
+这是一个静态网页的代码，需要你帮我修改。
+
+第一，作品集图片展示部分，“项目一”、“项目二”、“项目三”和“项目四”这些标题都居中，不要放到左边；
+第二，作品集图片展示部分，“项目四”改成四张250x250px的图片，四张图片从左往右排列，整体居中；
