@@ -1,677 +1,220 @@
 <!DOCTYPE html>
-<html lang="en-US" class="no-js">
+<html lang="zh-CN">
 <head>
-<title>精美企业网站单页面HTML模板下载 - 我爱模板网 www.5imoban.net</title>
-<meta charset="UTF-8">
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="./static/css/bootstrap.min.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/contact-form.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/remodal.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/remodal-default-theme.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/font-awesome.min.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/style_1.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/lightcase.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/tipso.min.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/animate.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/owl.carousel.min.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/jquery.pagepiling.min.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/siliconfolio.min.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/style_2.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/vc.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/wocommerce.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./static/css/main.css" type="text/css" media="all" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的个人简历与作品集</title>
+  <style>
+    /* 通用样式重置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Arial", sans-serif;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+    }
 
-<!--新增加视频banner的样式-->
-<link rel="stylesheet" href="./static/css/video.css" type="text/css" media="all" />
-<!--新增加视频banner的样式end-->
+    /************* 顶部导航区域 *************/
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+    nav li a {
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+    }
+    nav li a:hover {
+      color: #ee3b36; /* 鼠标悬停时变红 */
+    }
 
-<script src="./static/js/jquery.js"></script>
-<script src="./static/js/jquery-migrate.min.js"></script>
-<!--[if lt IE 9]>
-<script src="./static/js/html5min.js"></script>
-<![endif]-->
-<script src="./static/js/jquery-1.8.3.min.js"></script>
-<script src="./static/js/jquery.pagepiling.min.js"></script>
+    /************* 第一屏：人物名称与介绍 *************/
+    .main-section {
+      width: 100%;
+      background-color: #fff;
+      padding: 50px 10%;
+      text-align: center;
+    }
+    .profile-photo img {
+      max-width: 220px;
+      border-radius: 4px;
+    }
+    .profile-name {
+      margin-top: 20px;
+    }
+    .profile-name h1 {
+      font-size: 36px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    .profile-name h2 {
+      font-size: 18px;
+      color: #888;
+      font-weight: normal;
+    }
+
+    /* Introduction 区块 */
+    .introduction {
+      margin-top: 40px;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+    .introduction h3 {
+      font-size: 20px;
+      color: #ee3b36; /* 与截图相似的红色 */
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .intro-content {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #333;
+    }
+    /* Instagram 按钮或链接 */
+    .instagram-link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 14px;
+      color: #ee3b36;
+      font-weight: bold;
+    }
+
+    /************* 作品集图片展示 *************/
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 10%;
+      background-color: #f9f9f9;
+    }
+    .image-gallery img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /************* 作品集视频展示 *************/
+    .video-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 10%;
+      background-color: #fff;
+    }
+    .video-gallery iframe {
+      width: 560px;
+      height: 315px;
+      border-radius: 8px;
+    }
+
+    /************* 底部区域 *************/
+    footer {
+      text-align: center;
+      padding: 20px 10%;
+      background-color: #fff;
+      border-top: 1px solid #eee;
+    }
+    footer p {
+      font-size: 14px;
+      color: #999;
+    }
+  </style>
 </head>
+<body>
 
-<body class="home woo_active raw_scroller">
-<div class="preload"></div>
-<div class="header">
-  <div class="logo_holder"> <a href="index.html"><img class="logo_for_dark_bg" src="./static/picture/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="./static/picture/logo_000.png" alt="Gravity" /></a> </div>
-  <div class="contacts">
-    <p><span class="hide_mobile mr-5">地址：xxxxxx万达广场x座xxx</span> 联系我们: (+86) 010-888888</p>
-  </div>
-  <!--<div id="site-header-social-menu" class="social-navigation">
-    <nav id="social-navigation" class="social-navigation" aria-label="Social Menu">
-      <div class="menu-social-menu-container">
-        <ul id="menu-social-menu" class="social-menu">
-          <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-          <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-          <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-          <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-        </ul>
-      </div>
+  <!-- 顶部导航 -->
+  <header>
+    <div class="logo">AND</div>
+    <nav>
+      <ul>
+        <li><a href="#">ARTIST</a></li>
+        <li><a href="#">STUDIO</a></li>
+        <li><a href="#">AUDITION</a></li>
+        <li><a href="#">ABOUT</a></li>
+      </ul>
     </nav>
-     .social-navigation -
-  </div>-->
-  
-  <!-- .site-header-social-menu --> 
-</div>
+  </header>
 
-
-<div class="page_title">
-  <p>Home</p>
-</div>
-<h6 class="section_number">01</h6>
-<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
-<div class="shoping_cart_icon"> <span class="shop_cart_full"></span> 菜单</div>
-<div class="menu_holder">
-  <div class="inner_holder">
-    <div class="text-logo">
-      <h3 class="logo_name">MENU</h3>
-      <p class="logo_description">导航菜单</p>
+  <!-- 第一屏：人物大图 + 姓名 + 介绍 -->
+  <section class="main-section">
+    <div class="profile-photo">
+      <!-- 这里放置你的顶部头像照片 -->
+      <img src="main-profile.jpg" alt="Main Profile Photo">
     </div>
-    <div class="call_extra"> <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i> </div>
-    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
-      <div class="menu-primary-menu-container">
-        <ul class="primary-menu">
-         <li class="current-menu-item current_page_item"><a href="/">首页Home</a></li>
-          <li><a href="">关于About</a></li>
-          <li><a href="">服务Services</a></li>
-		      <li><a href="">案例Caseshow</a></li>
-          <li><a href="">新闻News</a></li>
-          <li><a href="">联系Contacts</a></li>
-          <li><a href="http://www.5imoban.net">5imoban.net</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- .main-navigation -->
-    <div class="menu_footer">
-      <nav aria-label="Footer Menu">
-       <!-- <div class="menu-social-menu-container">
-          <ul class="footer-menu">
-            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-          </ul>
-        </div>
-      </nav>
-      -- .social-navigation -->
-      <p>Copyright © 2017. Design by <a href="https://www.chuan-yang.cn">chuan-yang.cn</a> 版权所有 抄袭必究</p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256879275'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1256879275%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
-    </div>
-  </div>
-  <div class="extra_holder">
-    <div class="inner_holder">
-      <h3 class="text-center">多一份参考，总有益处！</h3>
-      <p class="text-center mb-5">提交需求，免费获得专属《策划方案》及报价。</p>
-       <form action="/plus/diy.php" enctype="multipart/form-data" method="post" id='wap_reg1'>
-        <input type="hidden" name="diyid" value="1"/>
-        <input type="hidden" name="do" value="2" />
-        <input type="hidden" name="dede_fields" value="name,text;tel,text;subject,text;message,multitext" />
-        <input type="hidden" name="dede_fieldshash" value="b0f2ba307b42f9a1ee501dd49a11299f">
-        <div class="row text-left">
-          <div class="col-md-6">
-            <input class="form-name" type="text" name="name" value="" size="40" placeholder="姓名" />
-          </div>
-          <div class="col-md-6">
-            <input class="form-email" type="text" name="tel" value="" size="40" placeholder="电话" />
-          </div>
-          <div class="col-md-12">
-            <input class="form-subject" type="text" name="subject" value="网站/app/小程序/公众号/视频/H5/SEO" size="40" placeholder="类别" />
-          </div>
-          <div class="col-md-12">
-            <textarea class="form-message" name="message" cols="5" rows="2" placeholder="内容"></textarea>
-          </div>
-          <div class="col-md-12">
-            <p class="text-center mb-0">
-              <input class="send-forms" type="submit" value="提交留言" />
-            </p>
-          </div>
-        </div>
-        <div class="wpcf7-response-output wpcf7-display-none"></div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-<div class="footer">
-  <p>Copyright © 2022. Design by <a href="">xxx.net</a>  版权所有 抄袭必究  <a href="" target=_blank >xxx备xxxxxx号-1</a></p>
-</div>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256879275'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1256879275%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
-
-<div class="overlay"></div>
-
-
-  
-
-
-<div id="primary" class="content-area">
-  <main id="main" class="site-main">
-    <div>
-      <div class="entry-content" id="pagepiling">
-        
-		<!--第一屏内容start-->
-		
-		<div id="home" class="ppslide no-gutters  full-height main-1">
-
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-  <div id="container">
-    <video id="background_video" loop muted></video>
-    <div id="video_cover"></div>
-    <div id="overlay"></div>
-
-    <div id="video_controls">
-      <span id="play">
-        <img src="./static/picture/play.png">
-      </span>
-      <span id="pause">
-        <img src="./static/picture/pause.png">
-      </span>
+    <div class="profile-name">
+      <!-- 这里的名字可自行替换 -->
+      <h1>김다미</h1>
+      <h2>KIM DA MI</h2>
     </div>
 
-    <section id="main_content">
-      <div class="main-1-1"> WELCOME TO<br>
-            CHUANYANG COMPANY </div>
-          <div class="main-1-2"><span>极致体验只为至臻追求</span>
-            </div>
-       
-    </section>
-  </div>
-
-  </div>
-    
-	
-	   
-		
-		<!--
-		<div id="home" class="ppslide no-gutters bubbles full-height main-1">
-		
-          <div class="main-1-1"> WELCOME TO<br>
-            GRAVITY DESIGN STUDIO </div>
-          <div class="main-1-2"><span> Stand Out</span><br>
-            Among Your<br>
-            Competitors! </div>
-        </div>
-		  第一屏内容end-->
-		
-		<!--第二屏内容start-->
-        <div id="servicess" class="ppslide light_bg full-height align-items-center d-flex main-1-3">
-          <div class="container">
-            <div class="vc_column-inner">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="oi_custom_heading_holder mb-5">
-                    <div class="oi_vc_heading oi_border_position_center">
-                      <h1 class="oi_icon_titile">业务领域</h1>
-                      <div class="oi_heading_border oi_border_position_center"> <span></span> </div>
-                      <p class="oi_icon_sub_titile">站在营销的角度思考问题，从互动开发到影像视频，我们通过多元化的创意表达，为您营造前所未有的视觉体验与营销传达。</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-               <div id="serviceSlide" class="owl-carousel">
-               <a href="" title="点击查看相关案例"><div class="item-service main-1-s1">
-                  <h2 class="item-serv-title" >网站/APP</h2>
-                  <div class="item-serv-descr"> <strong>Website</strong>&amp; APP </div>
-                </div></a>
-               <a href="" title="点击查看相关案例"> <div class="item-service main-1-s2">
-                  <h2 class="item-serv-title">公众号/小程序</h2>
-                  <div class="item-serv-descr"> <strong>Weixin</strong>&amp; Small program </div>
-                </div></a>
-                <a href="" title="点击查看相关案例"><div class="item-service main-1-s3">
-                  <h2 class="item-serv-title">影像/三维</h2>
-                  <div class="item-serv-descr"> <strong>Viedo</strong>&amp; 3D </div>
-                </div></a>
-               <a href="" title="点击查看相关案例"> <div class="item-service main-1-s4">
-                  <h2 class="item-serv-title">展览/展示</h2>
-                  <div class="item-serv-descr"> <strong>Exhibition </strong>&amp; Interaction </div>
-                </div></a>
-                <a href="" title="点击查看相关案例"><div class="item-service main-1-s5">
-                  <h2 class="item-serv-title">&lt; HTML5 /&gt;</h2>
-                  <div class="item-serv-descr"> <strong>H5</strong> &amp; Originality </div>
-                </div></a>
-				<div class="item-service main-1-s4">
-                  <h2 class="item-serv-title">SEO优化推广</h2>
-                  <div class="item-serv-descr"> <strong>SEO</strong> &amp; SEM </div>
-                </div>
-              </div>
-              <a href="" title="" class="ult-btn">查看更多 | VIEW ALL SERVICES <span></span></a> </div>
-          </div>
-        </div>
-		<!--第二屏内容end-->
-		
-		<!--第三屏内容start-->
-        <div id="portfolio" class="ppslide light_bg no-gutters full-height align-items-center d-flex main-5">
-          <div class="col-md-12">
-            <div id="customPortfolio" class="vc_column-inner owl-carousel">
-			<div class="oi_ajax_port_holder">
-                <div class="oi_bg_img_shortcode" style="background-image:url(./static/images/1-1p20gj1090-l.jpg)"></div>
-                <div class="oi_creative_p_content">
-                  <div class="arrow-up"></div>
-                  <img class="prize_img" width="48" alt="" src="./static/picture/prize.png">
-                  <div class="oi_creative_p_holder">
-                    <h3 class="oi_c_title"><a href="">斯里兰卡公寓三维宣传片</a></h3>
-                    <span class="oi_c_cats"><a href="">分类：影像/三维</a></span>
-                    <div class="oi_c_description">
-                      <div class="oi_c_description_content"></div>
-                    </div>
-                    <div class="pfolio-customNav"></div>
-                  </div>
-                </div>
-              </div>
-<div class="oi_ajax_port_holder">
-                <div class="oi_bg_img_shortcode" style="background-image:url(./static/images/1-1p20gi0160-l.jpg)"></div>
-                <div class="oi_creative_p_content">
-                  <div class="arrow-up"></div>
-                  <img class="prize_img" width="48" alt="" src="./static/picture/prize.png">
-                  <div class="oi_creative_p_holder">
-                    <h3 class="oi_c_title"><a href="">北京城建微信公众号</a></h3>
-                    <span class="oi_c_cats"><a href="">分类：公众号/小程序</a></span>
-                    <div class="oi_c_description">
-                      <div class="oi_c_description_content"></div>
-                    </div>
-                    <div class="pfolio-customNav"></div>
-                  </div>
-                </div>
-              </div>
-<div class="oi_ajax_port_holder">
-                <div class="oi_bg_img_shortcode" style="background-image:url(./static/images/1-1p20gk1200-l.jpg)"></div>
-                <div class="oi_creative_p_content">
-                  <div class="arrow-up"></div>
-                  <img class="prize_img" width="48" alt="" src="./static/picture/prize.png">
-                  <div class="oi_creative_p_holder">
-                    <h3 class="oi_c_title"><a href="">沁春汇H5创意推广页</a></h3>
-                    <span class="oi_c_cats"><a href="">分类：H5创意互动</a></span>
-                    <div class="oi_c_description">
-                      <div class="oi_c_description_content"></div>
-                    </div>
-                    <div class="pfolio-customNav"></div>
-                  </div>
-                </div>
-              </div>
-<div class="oi_ajax_port_holder">
-                <div class="oi_bg_img_shortcode" style="background-image:url(./static/images/1-1p20gf4350-l.jpg)"></div>
-                <div class="oi_creative_p_content">
-                  <div class="arrow-up"></div>
-                  <img class="prize_img" width="48" alt="" src="./static/picture/prize.png">
-                  <div class="oi_creative_p_holder">
-                    <h3 class="oi_c_title"><a href="">阳泉光伏展厅LED大屏互动</a></h3>
-                    <span class="oi_c_cats"><a href="">分类：展览展示</a></span>
-                    <div class="oi_c_description">
-                      <div class="oi_c_description_content"></div>
-                    </div>
-                    <div class="pfolio-customNav"></div>
-                  </div>
-                </div>
-              </div>
-<div class="oi_ajax_port_holder">
-                <div class="oi_bg_img_shortcode" style="background-image:url(./static/images/1-1p20g64p9624.jpg)"></div>
-                <div class="oi_creative_p_content">
-                  <div class="arrow-up"></div>
-                  <img class="prize_img" width="48" alt="" src="./static/picture/prize.png">
-                  <div class="oi_creative_p_holder">
-                    <h3 class="oi_c_title"><a href="">雅森国际响应式网站</a></h3>
-                    <span class="oi_c_cats"><a href="">分类：网站/APP</a></span>
-                    <div class="oi_c_description">
-                      <div class="oi_c_description_content"></div>
-                    </div>
-                    <div class="pfolio-customNav"></div>
-                  </div>
-                </div>
-              </div>
-
-          </div>
-        </div>
-		</div>
-		<!--第三屏内容end-->
-		
-		<!--第四屏内容start-->
-        <div id="Clients" class="ppslide light_bg full-height align-items-center d-flex main-2">
-          <div class="container">
-            <div class="vc_column-inner">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="oi_custom_heading_holder">
-                    <div class="oi_vc_heading oi_border_position_center">
-                      <h1 class="oi_icon_titile">品牌客户 &amp; 合作伙伴</h1>
-                      <div class="oi_heading_border oi_border_position_center"><span></span></div>
-                      <p class="oi_icon_sub_titile">感谢过去、现在和未来的客户们！是他们的信赖成就了我们的今天，我们将一如既往，不负重托！ </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="宝洁中国" id="oi_164_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l01.png" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="宝马中国" id="oi_167_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l02.png" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="迪信通" id="oi_169_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l03.png" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="小米手机" id="oi_3344_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l04.jpg" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="万达集团" id="oi_173_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l05.png" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="乐成集团" id="oi_176_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l06.png" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-              </div>
-              <div class="row d-flex">
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="新东方教育集团" id="oi_178_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l07.png" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="中粮集团" id="oi_179_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l08.png" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="万科集团" id="oi_182_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l09.png" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-                <div class="col-md-2">
-                  <div data-color="#ffffff" data-bg="#000000" data-position="bottom" title="建设银行" id="oi_3343_partner" class="oi_partner_holder"><a target="_blank" href=""><img width="325" height="260" src="./static/picture/l010.jpg" class="attachment-full img-fluid vc_team_member_image size-full img-fluid" alt=""/></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-		<!--第四屏内容end-->
-		
-		<!--第五屏内容start-->
-        <div id="testimoniials" class="ppslide dark_bg full-height align-items-center d-flex main-3">
-          <div class="container">
-            <div class="vc_column-inner">
-              <div class="row">
-                <div class="col-md-6 offset-md-3">
-                  <div class="oi_custom_heading_holder mb-5">
-                    <div class="oi_vc_heading oi_border_position_bottom text-center">
-                      <div class="oi_heading_icon oi_heading_icon_center"><i class="li_star"></i></div>
-                      <h1 class="oi_icon_titile oi_white">客户见证</h1>
-                      <p class="oi_icon_sub_titile oi_grey">向我们曾经、过去和未来的客户们致敬</p>
-                      <div class="oi_heading_border oi_border_position_bottom text-center"><span class="oi_white"></span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="testimonialSlide" class="owl-carousel">
-                <div class="item-testimon">
-                  <div class="oi_testimonial_holder text-center">
-                    <div class="oi_testimonial_content_holder">
-                      <h3 class="oi_tesimonial_content oi_white">从第一次合作到如今的深度合作，传扬的同事们认真负责！客服一直不厌其烦的帮我处理各种因我们自身出现的使用问题，对于发现的问题，能很快的解决。</h3>
-                    </div>
-                    <div class="oi_testimonial_author_holder text-center"><img class="oi_oi_testimonial_image" src="./static/picture/l01.png" alt="">
-                      <h6 class="oi_tesimonial_title oi_white text-center">宝洁中国<br>
-                        品牌营销部</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="item-testimon">
-                  <div class="oi_testimonial_holder text-center">
-                    <div class="oi_testimonial_content_holder">
-                      <h3 class="oi_tesimonial_content oi_white">传扬总是提供最佳服务，最令我们印象深刻的是他们的专业性、灵活性与及时的服务，这对于我们必须做出紧急决定及掌握市场商机至关重要。 🙂</h3>
-                    </div>
-                    <div class="oi_testimonial_author_holder text-center"><img class="oi_oi_testimonial_image" src="./static/picture/l05.png" alt="">
-                      <h6 class="oi_tesimonial_title oi_white text-center">万达集团<br>
-                        市场推广部</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="item-testimon">
-                  <div class="oi_testimonial_holder text-center">
-                    <div class="oi_testimonial_content_holder">
-                      <h3 class="oi_tesimonial_content oi_white">每当咨询传扬时，你们总能给出有效意见，并且从不会在第一时间拒绝我们的新想法，甚至基于我们的要求做突破，这一点对我们而言确是难能可贵。</h3>
-                    </div>
-                    <div class="oi_testimonial_author_holder text-center"><img class="oi_oi_testimonial_image" src="./static/picture/l08.png" alt="">
-                      <h6 class="oi_tesimonial_title oi_white text-center">中粮集团<br>
-                        房地产事业部</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-		<!--第五屏内容end-->
-		
-		<!--第六屏内容start-->
-        <div id="ready_to_start" class="ppslide light_bg full-height align-items-center d-flex main-4">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="vc_column-inner">
-                  <div class="main-4-1">
-                    <div class="item_height_x2"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="vc_column-inner">
-                  <div class="d-flex oi_vc_text align-items-center item_height_x2 main-4-2">
-                    <div class="oi_vc_text_span">
-                      <div class="clock_click">
-                        <div class="clock_mask"></div>
-                      </div>
-                      <div class="clock_shortcode">
-                        <div class="box">
-                          <div class="title" id="title">
-                            <h3><span id="timeclock">&nbsp;</span></h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="oi_custom_heading_holder mb-5">
-                        <div class="oi_vc_heading oi_border_position_none">
-                          <h1 class="oi_icon_titile">提交您的需求，免费获得专属《策划方案》及报价！</h1>
-                          <p class="oi_icon_sub_titile">+86(010)888888 / xxxx@qq.com</p>
-                        </div>
-                      </div>
-                      <a class="oi_vc_button in_contact" data-title-color-hover="#000" data-bg-color-hover="#FFED00" data-border-c-hover="#FFED00" href="#"  data-remodal-target="contacts">立即提交需求</a>
-                      <div class="remodal p-3" data-remodal-id="contacts">
-                        <button data-remodal-action="close" class="remodal-close"></button>
-                        <h2>多一份参考，总有益处！</h2>
-                        <p>+86 (010) 56026070 | bjchuanyang@qq.com</p>
-                        <hr />
-                        <div role="form" class="wpcf7">
-                         <form action="/plus/diy.php" enctype="multipart/form-data" method="post" id='wap_reg1'>
-                         <input type="hidden" name="diyid" value="1"/>
-                         <input type="hidden" name="do" value="2" />
-                         <input type="hidden" name="dede_fields" value="name,text;tel,text;subject,text;message,multitext" />
-                         <input type="hidden" name="dede_fieldshash" value="b0f2ba307b42f9a1ee501dd49a11299f">
-                            <div class="row text-left">
-                              <div class="col-md-6">
-                                <input class="form-name" type="text" name="name" value="" size="40" placeholder="姓名" />
-                              </div>
-                              <div class="col-md-6">
-                                <input class="form-email" type="text" name="tel" value="" size="40" placeholder="电话" />
-                              </div>
-                              <div class="col-md-12">
-                                <input class="form-subject" type="text" name="subject" value="" size="40" placeholder="类别" />
-                              </div>
-                              <div class="col-md-12">
-                                <textarea class="form-message" name="your-message" cols="5" rows="2" placeholder="内容"></textarea>
-                              </div>
-                              <div class="col-md-12">
-                                <p class="text-center mb-0">
-                                  <input class="send-forms" type="submit" value="提交留言" />
-                                </p>
-                              </div>
-                            </div>
-                            <div class="wpcf7-response-output wpcf7-display-none"></div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-		<!--第六屏内容end-->
-		
-		<!--第七屏内容start-->
-        <div id="achivements" class="ppslide dark_bg full-height align-items-center d-flex main-6">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="vc_column-inner">
-                  <div class="oi_vc_text item_height_x2 main-6-1">
-                    <div class="oi_vc_text_span">
-                      <h2><strong>我们时刻准备为您的好点子</strong> <br><span>通宵达旦</span></h2>
-                      <p class="mb-4">以用户体验为核心，立足客户营销需求，找到最佳解决方案。让<B>产品与市场，创意与技术完美结合</b>，创造极具个性、有价值的用户体验产品，只为您的至臻追求！
-</p>
-                      <p class="mb-3">我们更<b>重视互动领域中视觉调性的渲染、创意策略的运用、营销价值的导入</b>，为您的客户奉上一道视觉盛宴。</p>
-					  <p class="mb-3">我们懂得“工作”与“事业”的区别，用心去对待每一次托付！<br />
-                        保持一颗永远向前的心不容易，<b>拒绝空谈</b>，我们每日关注行业的革新动态，分享探讨、转化吸收，积跬步至千里。</p>
-                      <!--<p class="mb-3"><img class="alignnone size-full wp-image-267" src="./static/picture/sig.png" alt="sig" width="200" height="82" /></p>-->
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="vc_column-inner">
-                  <div class="oi_vc_text item_height_x2 list-service">
-                    <div class="oi_vc_text_span">
-                      <div class="oi_custom_heading_holder">
-                        <div class="oi_heading_icon oi_heading_icon_left"><i class="li_study"></i></div>
-                        <div class="oi_vc_heading oi_border_position_center">
-                          <h4 class="oi_icon_titile">9年专业化服务经验 </h4>
-                          <div class="oi_heading_border oi_border_position_center"><span></span></div>
-                          <p class="oi_icon_sub_titile oi_white">来自4A公司的创意总监，6年以上经验的资深研发工程师和项目总监，5年以上的UI/UE设计师团队与我们一路同行 </p>
-                        </div>
-                      </div>
-                      <div class="oi_custom_heading_holder">
-                        <div class="oi_heading_icon oi_heading_icon_left"><i class="li_fire"></i></div>
-                        <div class="oi_vc_heading oi_border_position_center">
-                          <h4 class="oi_icon_titile">1000余个项目经验</h4>
-                          <div class="oi_heading_border oi_border_position_center"><span></span></div>
-                          <p class="oi_icon_sub_titile oi_white">覆盖20余个行业，1000余个项目经验。从汽车到房产，从银行到通信......我们的足迹遍布全国各地！</p>
-                        </div>
-                      </div>
-                      <div class="oi_custom_heading_holder">
-                        <div class="oi_heading_icon oi_heading_icon_left"><i class="li_diamond"></i></div>
-                        <div class="oi_vc_heading oi_border_position_center">
-                          <h4 class="oi_icon_titile">七维服务体系</h4>
-                          <div class="oi_heading_border oi_border_position_center"><span></span></div>
-                          <p class="oi_icon_sub_titile oi_white">深度研发：市场研究、用户研究、交互设计、视觉设计、影像设计、数动实验、培训与咨询七维服务体系，保证对症直达“痛点”</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-		<!--第七屏内容end-->
-		
-		<!--第八屏内容start-->		
-        <div id="contacts" class="ppslide light_bg full-height align-items-center d-flex main-7">
-          <div class="container">
-            <div class="vc_column-inner">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="vc_column-inner">
-                    <div class="oi_vc_text item_height_x2 main-7-1">
-                      <div class="oi_vc_text_span">
-                        <div class="oi_custom_heading_holder">
-                          <div class="oi_vc_heading oi_border_position_center">
-                            <h1 class="oi_icon_titile">多一份参考，总有益处！</h1>
-                            <div class="oi_heading_border oi_border_position_center"><span></span></div>
-                            <p class="oi_icon_sub_titile">联系我们的专属顾问，免费获得一对一《策划方案》及报价。</p>
-                          </div>
-                        </div>
-                        <div role="form" class="wpcf7">
-                           <form action="" enctype="multipart/form-data" method="post" id='wap_reg1'>
-                         <input type="hidden" name="diyid" value="1"/>
-                         <input type="hidden" name="do" value="2" />
-                         <input type="hidden" name="dede_fields" value="name,text;tel,text;subject,text;message,multitext" />
-                         <input type="hidden" name="dede_fieldshash" value="b0f2ba307b42f9a1ee501dd49a11299f">
-                            <div class="row text-left">
-                              <div class="col-md-6">
-                                <input class="form-name" type="text" name="name" value="" size="40" placeholder="姓名" />
-                              </div>
-                              <div class="col-md-6">
-                                <input class="form-email" type="text" name="tel" value="" size="40" placeholder="电话" />
-                              </div>
-                              <div class="col-md-12">
-                                <input class="form-subject" type="text" name="subject" value="网站/app/小程序/公众号/视频/H5/SEO" size="40" placeholder="类别" />
-                              </div>
-                              <div class="col-md-12">
-                                <textarea class="form-message" name="message" cols="5" rows="2" placeholder="内容"></textarea>
-                              </div>
-                              <div class="col-md-12">
-                                <p class="text-center mb-0">
-                                  <input class="send-forms" type="submit" value="提交留言" />
-                                </p>
-                              </div>
-                            </div>
-                            <div class="wpcf7-response-output wpcf7-display-none"></div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="vc_column-inner ">
-                    <div class="oi_vc_text item_height_x2">
-                      <div class="oi_vc_text_span text-center">
-                        <h4 class="mb-4">联系我们</h4>
-                        <ul class="contact-info">
-                          <li>
-                            <div><strong>地址</strong></div>
-                            <p>北京市通州区万达广场C座706（互动科技部）  <br>海淀区三里河路甘家口大厦1408（影像三维部） </p>
-                          </li>
-                          <li>
-                            <div><strong>电话</strong></div>
-                            <p>+86-010-56026070<br />
-                              +86-010-56026071</p>
-                          </li>
-                          <li>
-                            <div><strong>EMAIL</strong></div>
-                            <p><a href="mailto:bjchuanyang@qq.com">bjchuanyang@qq.com</a></p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="introduction">
+      <h3>Introduction</h3>
+      <!-- Instagram 链接按钮，可自行更换链接或文字 -->
+      <a class="instagram-link" href="#" target="_blank">Instagram</a>
+      <div class="intro-content">
+        <p>
+          这里是你的个人介绍区域。根据截图的风格，你可以在这里写一些个人的背景、经历、特色等。
+          如果想分段，也可以多写几行文字。
+        </p>
+        <p>
+          你也可以在这里放一些简单的联系信息，或者一句话格言之类的。
+        </p>
       </div>
     </div>
-  </main>
-  <!-- .site-main --> 
-  
-</div>
-<!-- .content-area --> 
-<!-- .新增加的支持视频的js start--> 
-<script src="./static/js/bideo.js"></script>
-<script src="./static/js/main.js"></script>
-<!-- .新增加的支持视频的js end --> 
+  </section>
 
-<script src="./static/js/contact-form.js"></script> 
-<script src="./static/js/jquery.waitforimages.js"></script> 
-<script src="./static/js/isotope.pkgd.min.js"></script> 
-<script src="./static/js/imagesloaded.js"></script> 
-<script src="./static/js/tipso.min.js"></script> 
-<script src="./static/js/remodal.min.js"></script> 
-<script src="./static/js/owl.carousel.min.js"></script> 
-<script src="./static/js/lightcase.js"></script> 
-<script src="./static/js/functions.js"></script>
+  <!-- 第二屏：作品集图片展示 -->
+  <section class="image-gallery">
+    <h3>我的作品集</h3>
+    <img src="https://via.placeholder.com/250" alt="作品图片1">
+    <img src="https://via.placeholder.com/250" alt="作品图片2">
+    <img src="https://via.placeholder.com/250" alt="作品图片3">
+    <img src="https://via.placeholder.com/250" alt="作品图片4">
+    <!-- 这里可以继续添加更多作品图片 -->
+  </section>
 
+  <!-- 第三屏：作品集视频展示 -->
+  <section class="video-gallery">
+    <h3>我的作品视频</h3>
+    <iframe src="https://www.youtube.com/embed/你的视频ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/你的视频ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- 继续添加其他视频作品 -->
+  </section>
+
+  <!-- 底部区域 -->
+  <footer>
+    <p>© 2025 NTARQ | All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
