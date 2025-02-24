@@ -29,7 +29,7 @@
       list-style: none;
     }
 
-    /************* 顶部导航区域 *************/
+    /************* 顶部导航区域 *************/ 
     header {
       display: flex;
       justify-content: space-between;
@@ -56,7 +56,7 @@
       color: #ee3b36; /* 设置颜色 */
     }
 
-    /************* 第一屏：人物名称与介绍 *************/
+    /************* 第一屏：人物名称与介绍 *************/ 
     .main-section {
       width: 100%;
       background-color: #fff;
@@ -111,7 +111,7 @@
       font-weight: bold;
     }
 
-    /************* 作品集图片展示 *************/
+    /************* 作品集图片展示 *************/ 
     .image-gallery {
       display: flex;
       flex-direction: column; /* 垂直排列 */
@@ -171,7 +171,7 @@
       gap: 20px; /* 小图之间的间隔 */
     }      
 
-    /************* 作品集视频展示 *************/
+    /************* 作品集视频展示 *************/ 
     .video-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -186,7 +186,7 @@
       border-radius: 8px;
     }
 
-    /************* 底部区域 *************/
+    /************* 底部区域 *************/ 
     footer {
       text-align: center;
       padding: 20px 10%;
@@ -273,7 +273,7 @@
   <!-- 第二屏：作品集图片展示 -->
   <section class="image-gallery">
     <div class="project">
-      <div class="project-title">项目一</div>
+      <div class="project-title" style="text-align: center;">项目一</div>
       <div class="project-separator"></div>
       <!-- 左边的大图 -->
       <div class="project-images-left">
@@ -293,7 +293,7 @@
   </div>
 
     <div class="project">
-      <div class="project-title">项目二</div>
+      <div class="project-title" style="text-align: center;">项目二</div>
       <div class="project-separator"></div>
       <!-- 左边的大图 -->
       <div class="project-images-left">
@@ -313,7 +313,7 @@
   </div>
 
     <div class="project">
-      <div class="project-title">项目三</div>
+      <div class="project-title" style="text-align: center;">项目三</div>
       <div class="project-separator"></div>
       <!-- 左边的大图 -->
       <div class="project-images-left">
@@ -333,26 +333,19 @@
   </div>
 
     <div class="project">
-      <div class="project-title">项目四</div>
+      <div class="project-title" style="text-align: center;">项目四</div>
       <div class="project-separator"></div>
-      <!-- 左边的大图 -->
+      <!-- 四张图片从左到右排列 -->
       <div class="project-images-left">
-       <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="大图1" class="big-image">
-      </div>
-      <!-- 右边的小图 -->
-      <div class="project-images-right">
-      <div class="row">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图1" class="small-image">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图2" class="small-image">
-      </div>
-      <div class="row">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图3" class="small-image">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图4" class="small-image">
+        <div class="row">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图1" class="small-image">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图2" class="small-image">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图3" class="small-image">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="小图4" class="small-image">
+        </div>
       </div>
     </div>
-  </div>
-    
-    <!-- 继续添加其他项目 -->
+
   </section>
 
   <!-- 第三屏：作品集视频展示 -->
