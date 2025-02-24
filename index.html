@@ -51,6 +51,10 @@
       color: #333;
       font-weight: 500;
     }
+    nav .email-link {
+      font-weight: bold;
+      color: #ee3b36; /* 设置颜色 */
+    }
 
     /************* 第一屏：人物名称与介绍 *************/
     .main-section {
@@ -78,7 +82,7 @@
     }
 
     /* introduction 区块 */
-    .introduction {
+    .introduction, .contact-info {
       margin-top: 40px;
       text-align: left;
       max-width: 800px;
@@ -86,13 +90,13 @@
       margin-right: auto;
       position: relative;
     }
-    .introduction h3 {
+    .introduction h3, .contact-info h3 {
       font-size: 20px;
-      color: #ee3b36; /* 与截图相似的红色 */
+      color: #ee3b36;
       margin-bottom: 10px;
       font-weight: bold;
     }
-    .intro-content {
+    .intro-content, .contact-info-content {
       font-size: 14px;
       line-height: 1.8;
       color: #333;
@@ -121,6 +125,22 @@
       height: 250px;
       object-fit: cover;
       border-radius: 8px;
+    }
+
+    /* 每个项目的分隔样式 */
+    .project {
+      margin-bottom: 50px;
+    }
+    .project-title {
+      font-size: 20px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .project-separator {
+      background-color: #f1f1f1;
+      height: 1px;
+      margin-bottom: 30px;
     }
 
     /************* 作品集视频展示 *************/
@@ -162,37 +182,42 @@
         <li></li>
         <li></li>
         <li>点击邮箱联系</li>
-      <li>
-        <a class="email-link" href="mailto:ouhuayang@outlook.com" target="_blank">
-         <!-- Email 链接按钮，点击后直接打开邮件客户端预设好邮箱地址和邮件主题 -->
-          <img src="https://r2u.469821.xyz/mail-ai-fill.png" alt="Email Icon" style="vertical-align:middle; width:20px; height:20px;"> Email
-        </a>
-      </li>
-    </ul>
-  </nav>
-</header>
+        <li>
+          <a class="email-link" href="mailto:ouhuayang@outlook.com" target="_blank">
+            <!-- Email 链接按钮 -->
+            <img src="https://r2u.469821.xyz/mail-ai-fill.png" alt="Email Icon" style="vertical-align:middle; width:20px; height:20px;"> Email
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- 第一屏：人物大图 + 姓名 + 介绍 -->
   <section class="main-section">
     <div class="profile-photo">
-      <!-- 这里放置你的顶部头像照片 -->
       <img src="https://r2u.469821.xyz/BIGFA_标准头像.png">
     </div>
     <div class="profile-name">
-      <!-- 这里的名字可自行替换 -->
       <h1>BIGFA</h1>
       <h2>欢迎联系我</h2>
     </div>
 
-<div class="introduction">
-  <h3>Personal Introduction</h3>
-  <div class="intro-content">
+    <div class="introduction">
+      <h3>Personal Introduction</h3>
+      <div class="intro-content">
+        <p>这里是你的个人介绍区域。根据截图的风格，你可以在这里写一些个人的背景、经历、特色等。</p>
+        <p>你也可以在这里放一些简单的联系信息，或者一句话格言之类的。</p>
+      </div>
+    </div>
+
+    <!-- 新增的联系方式区块 -->
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <div class="contact-info-content">
         <p>
-          这里是你的个人介绍区域。根据截图的风格，你可以在这里写一些个人的背景、经历、特色等。
-          如果想分段，也可以多写几行文字。
-        </p>
-        <p>
-          你也可以在这里放一些简单的联系信息，或者一句话格言之类的。
+          <img src="https://example.com/phone-icon.png" alt="Phone Icon" style="vertical-align:middle;"> 13450532802 | 
+          <img src="https://example.com/email-icon.png" alt="Email Icon" style="vertical-align:middle;"> ouhuayang@outlook.com | 
+          <img src="https://example.com/other-icon.png" alt="Other Icon" style="vertical-align:middle;"> bigfa0220
         </p>
       </div>
     </div>
@@ -200,20 +225,32 @@
 
   <!-- 第二屏：作品集图片展示 -->
   <section class="image-gallery">
-    <h3>我的作品集</h3>
-    <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片1">
-    <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片2">
-    <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片3">
-    <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片4">
-    <!-- 这里可以继续添加更多作品图片 -->
+    <div class="project">
+      <div class="project-title">项目一</div>
+      <div class="project-separator"></div>
+      <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片1">
+      <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片2">
+      <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片3">
+      <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片4">
+    </div>
+
+    <div class="project">
+      <div class="project-title">项目二</div>
+      <div class="project-separator"></div>
+      <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片5">
+      <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片6">
+      <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片7">
+      <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="作品图片8">
+    </div>
+
+    <!-- 继续添加其他项目 -->
   </section>
 
   <!-- 第三屏：作品集视频展示 -->
   <section class="video-gallery">
-    <h3>我的作品视频</h3>
+    <h3>动态集</h3>
     <iframe src="https://www.bilibili.com/video/BV1fW411G71y/?vd_source=e8234d0bb7ca6dc775af880243757b1a" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <iframe src="https://www.bilibili.com/video/BV1Qb4y1L7To" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <!-- 继续添加其他视频作品 -->
   </section>
 
   <!-- 底部区域 -->
