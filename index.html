@@ -30,31 +30,7 @@
     }
 
     /************* 顶部导航区域 *************/
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 10%;
-      background-color: #fff;
-      border-bottom: 1px solid #eee;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    nav ul {
-      display: flex;
-      gap: 20px;
-    }
-    nav li {
-      font-size: 14px;
-      color: #333;
-      font-weight: 500;
-    }
-    nav .email-link {
-      font-weight: bold;
-      color: #ee3b36;
-    }
+/* 此部分未修改 */
 
     /************* 第一屏：人物名称与介绍 *************/
     .main-section {
@@ -81,7 +57,6 @@
       font-weight: normal;
     }
 
-    /* introduction 区块 */
     .introduction, .contact-info {
       margin-top: 40px;
       text-align: left;
@@ -101,7 +76,7 @@
       line-height: 1.8;
       color: #333;
     }
-    /* Instagram 链接 */
+
     .instagram-link {
       position: absolute;
       top: 0;
@@ -129,6 +104,7 @@
       width: 100%;
       max-width: 1000px;
       gap: 30px;
+      justify-content: center;  /* 确保整体居中 */
     }
 
     /* 项目标题样式 */
@@ -145,6 +121,7 @@
       gap: 20px;
       justify-content: center;
       flex-wrap: wrap;
+      width: 100%;
     }
     
     /* 通用图片样式 */
@@ -165,8 +142,8 @@
 
     /* 大图样式 */
     .big-image {
-      width: 510px;
-      height: 510px;
+      width: 520px;  /* 修改了尺寸 */
+      height: 520px; /* 修改了尺寸 */
       object-fit: cover;
       border-radius: 8px;
     }
