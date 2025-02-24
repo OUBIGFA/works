@@ -130,13 +130,6 @@
     }
 
     /* 项目标题样式 */
-
-    .project-title 01 {
-      font-size: 40px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
     .project-title {
       width: 100%;
       text-align: center;
@@ -147,6 +140,7 @@
     .project {
       display: flex;
       justify-content: center; /* 水平居中对齐 */
+      align-items: center; /* 添加垂直居中对齐 */
       align-items: flex-start; /* 上对齐 */
       width: 100%;
       max-width: 1000px; /* 设置最大宽度 */
@@ -287,7 +281,7 @@
   <!-- 第二屏：作品集图片展示 -->
   <section class="image-gallery">
     <div class="project">
-      <div class="">项目一</div>
+      <div class="project-title">项目一</div>
       <div class="project-separator"></div>
       <!-- 左边的大图 -->
       <div class="project-images-left">
@@ -383,3 +377,5 @@
 
 </body>
 </html>
+
+这段代码中，“第二屏：作品集图片展示”中的标题“项目一”“项目二”“项目三”“项目四”没有跟整体图片垂直居中对齐，到底是哪里出了问题？
