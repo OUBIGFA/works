@@ -131,7 +131,6 @@
 
     /* 项目标题样式 */
     .project-title {
-      width: 100%;
       text-align: center;
       font-size: 24px;
     }
@@ -139,12 +138,13 @@
     /* 每个项目的容器 */
     .project {
       display: flex;
-
+      justify-content: center; /* 水平居中对齐 */
       align-items: center; /* 垂直居中对齐 */
       align-items: flex-start; /* 上对齐 */
       width: 100%;
       max-width: 1000px; /* 设置最大宽度 */
       gap: 30px; /* 控制大图与小图之间的间隔 */
+      height: 520px; /* 给项目容器设置固定高度 */
     }
     
     /* 左侧的大图样式 */
