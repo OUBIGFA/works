@@ -1,96 +1,219 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人简历</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #ff4500;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        section {
-            padding: 20px;
-        }
-        .intro, .biography {
-            background-color: white;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .intro img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-right: 20px;
-            vertical-align: middle;
-        }
-        .intro p {
-            font-size: 16px;
-        }
-        .biography ul {
-            list-style: none;
-            padding: 0;
-        }
-        .biography li {
-            margin: 10px 0;
-        }
-        .video-embed {
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的个人简历与作品集</title>
+  <style>
+    /* 通用样式重置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Arial", sans-serif;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /************* 顶部导航区域 *************/
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+    nav li a {
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+    }
+    nav li a:hover {
+      color: #ee3b36; /* 鼠标悬停时变红 */
+    }
+
+    /************* 第一屏：人物名称与介绍 *************/
+    .main-section {
+      width: 100%;
+      background-color: #fff;
+      padding: 50px 10%;
+      text-align: center;
+    }
+    .profile-photo img {
+      max-width: 220px;
+      border-radius: 4px;
+    }
+    .profile-name {
+      margin-top: 20px;
+    }
+    .profile-name h1 {
+      font-size: 36px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    .profile-name h2 {
+      font-size: 18px;
+      color: #888;
+      font-weight: normal;
+    }
+
+    /* Introduction 区块 */
+    .introduction {
+      margin-top: 40px;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+    .introduction h3 {
+      font-size: 20px;
+      color: #ee3b36; /* 与截图相似的红色 */
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .intro-content {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #333;
+    }
+    /* Instagram 按钮或链接 */
+    .instagram-link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 14px;
+      color: #ee3b36;
+      font-weight: bold;
+    }
+
+    /************* 第二屏：大头像 + Biography *************/
+    .biography-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 10%;
+      background-color: #fff;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+    .biography-photo img {
+      max-width: 300px;
+      border-radius: 4px;
+      display: block;
+    }
+    .biography-content {
+      max-width: 400px;
+    }
+    .biography-content h3 {
+      font-size: 20px;
+      color: #ee3b36;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .bio-list {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #333;
+    }
+    .bio-list li {
+      margin-bottom: 5px;
+    }
+
+    /************* 背景大图区域 *************/
+    .forest-section {
+      width: 100%;
+      min-height: 500px;
+      background: url("forest.jpg") no-repeat center center/cover; /* forest.jpg 换成你自己的森林背景 */
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .forest-overlay-text {
+      color: #fff;
+      font-size: 24px;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    /************* 底部区域 *************/
+    footer {
+      text-align: center;
+      padding: 20px 10%;
+      background-color: #fff;
+      border-top: 1px solid #eee;
+    }
+    footer p {
+      font-size: 14px;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>我的个人简历</h1>
-</header>
+  <!-- 顶部导航 -->
+  <header>
+    <div class="logo">AND</div>
+    <nav>
+      <ul>
+        <li><a href="#">ARTIST</a></li>
+        <li><a href="#">STUDIO</a></li>
+        <li><a href="#">AUDITION</a></li>
+        <li><a href="#">ABOUT</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section>
-    <div class="intro">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="个人头像">
-        <div>
-            <h2>简介</h2>
-            <p>这里是个人简介内容，你可以详细描述你的经历、技能等。</p>
-        </div>
+  <!-- 第一屏：人物大图 + 姓名 + 介绍 -->
+  <section class="main-section">
+    <div class="profile-photo">
+      <!-- 这里放置你的顶部头像照片 -->
+      <img src="main-profile.jpg" alt="Main Profile Photo">
+    </div>
+    <div class="profile-name">
+      <!-- 这里的名字可自行替换 -->
+      <h1>김다미</h1>
+      <h2>KIM DA MI</h2>
     </div>
 
-    <div class="biography">
-        <h2>作品集</h2>
-        <ul>
-            <li><a href="https://vimeo.com/1058365604">作品1 - 影片名称</a></li>
-            <li><a href="https://vimeo.com/1058365604">作品2 - 影片名称</a></li>
-            <!-- 继续添加作品链接 -->
-        </ul>
+    <div class="introduction">
+      <h3>Introduction</h3>
+      <!-- Instagram 链接按钮，可自行更换链接或文字 -->
+      <a class="instagram-link" href="#" target="_blank">Instagram</a>
+      <div class="intro-content">
+        <p>
+          这里是你的个人介绍区域。根据截图的风格，你可以在这里写一些个人的背景、经历、特色等。
+          如果想分段，也可以多写几行文字。
+        </p>
+        <p>
+          你也可以在这里放一些简单的联系信息，或者一句话格言之类的。
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="biography">
-        <h2>奖项</h2>
-        <ul>
-            <li>2021年 获得某奖项</li>
-            <li>2020年 获得某奖项</li>
-            <!-- 继续添加奖项 -->
-        </ul>
-    </div>
-
-    <div class="video-embed">
-        <h2>作品展示</h2>
-        <iframe width="560" height="315" src="https://vimeo.com/1058365604" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <!-- 你可以通过修改URL来展示不同的视频作品 -->
-    </div>
-</section>
-
-</body>
-</html>
+  <!-- 第二屏：大头像 + Biography 列表 -->
+  <section class="biography-section">
+    <div class="biography-photo">
+      <!-- 这里
