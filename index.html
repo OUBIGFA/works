@@ -114,19 +114,20 @@
     /************* 作品集图片展示 *************/
     .image-gallery {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      flex-direction: column; /* 垂直排列 */
+      justify-content: flex-start;
+      gap: 50px; /* 控制每个项目之间的间隔 */
       padding: 50px 10%;
       background-color: #f9f9f9;
     }
+    
     .image-gallery img {
       width: 250px;
       height: 250px;
       object-fit: cover;
       border-radius: 8px;
     }
-
+    
     /* 每个项目的分隔样式 */
     .project {
       margin-bottom: 50px;
@@ -142,6 +143,8 @@
       height: 1px;
       margin-bottom: 30px;
     }
+
+
 
     /************* 作品集视频展示 *************/
     .video-gallery {
