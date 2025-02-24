@@ -131,20 +131,26 @@
 
     /* 项目标题样式 */
     .project-title {
-      text-align: center;
+      margin-bottom: 20px; /* 标题与图片之间的间距 */
       font-size: 24px;
     }
+
     
     /* 每个项目的容器 */
     .project {
       display: flex;
-      justify-content: center; /* 水平居中对齐 */
-      align-items: center; /* 垂直居中对齐 */
-      align-items: flex-start; /* 上对齐 */
+      flex-direction: column; /* 改为列布局 */
+      align-items: center; /* 子元素水平居中 */
+      max-width: 1000px;
       width: 100%;
-      max-width: 1000px; /* 设置最大宽度 */
-      gap: 30px; /* 控制大图与小图之间的间隔 */
-      height: 520px; /* 给项目容器设置固定高度 */
+      margin: 0 auto; /* 可选：确保项目整体居中 */
+    }
+
+    /* 图片样式 */
+    .project-images {
+      display: flex;
+      justify-content: center; /* 图片区域水平居中 */
+      gap: 30px; /* 左右图片之间的间距 */
     }
     
     /* 左侧的大图样式 */
@@ -282,7 +288,7 @@
   <section class="image-gallery">
     <div class="project">
       <div class="project-title">项目一</div>
-      <div class="project-separator"></div>
+      <div class="project-images">
       <!-- 左边的大图 -->
       <div class="project-images-left">
        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="大图1" class="big-image">
@@ -377,5 +383,3 @@
 
 </body>
 </html>
-
-这段代码中，“第二屏：作品集图片展示”中的标题“项目一”“项目二”“项目三”“项目四”没有跟整体图片垂直居中对齐，到底是哪里出了问题？
