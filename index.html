@@ -6,7 +6,7 @@
   <title>My Works</title>
 
   <!-- 网页图标 -->
-  <link rel="icon" href="https://r2u.469821.xyz/BIGFA_标准头像.png" />
+  <link rel="icon" href="https://r2u.469821.xyz/OWLEYE02.png" />
 
   <style>
     /* 通用样式重置 */
@@ -54,7 +54,7 @@
     }
     nav .email-link {
       font-weight: bold;
-      color: #ee3b36;
+      color: #ee3b36; /* 设置颜色 */
     }
 
     /************* 第一屏：人物名称与介绍 *************/
@@ -65,7 +65,7 @@
       text-align: center;
     }
     .profile-photo img {
-      max-width: 550px;
+      max-width: 120px;
       border-radius: 4px;
     }
     .profile-name {
@@ -119,7 +119,7 @@
       background-color: #f0f0f0;
     }
     .contact-info h3 {
-      display: none;
+      display: none; /* 根据图片隐藏英文标题 */
     }
     .contact-info h2 {
       font-size: 12px;
@@ -140,7 +140,7 @@
       color: #888;
     }
     .contact-info-content p img {
-      margin-right: 5px;
+      margin-right: 5px; /* 图标与文本间距 */
       width: 16px;
       height: 16px;
     }
@@ -151,67 +151,195 @@
     }
 
     /************* 作品集图片展示 *************/
-    .portfolio {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 40px;
+    .portfolio-section {
+      padding: 50px 10%;
     }
-    .portfolio-item {
-      width: 280px;
-      height: 300px;
-      overflow: hidden;
+    
+    .portfolio-project {
+      margin-bottom: 100px; /* 确保项目之间有足够距离 */
+    }
+    
+    .project-title {
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+    
+    .project-item {
       position: relative;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
+      overflow: hidden;
+      border-radius: 8px; /* 确保图片有正确的圆角 */
     }
-    .portfolio-item:hover {
-      transform: scale(1.1);
-    }
-    .portfolio-item img {
+    
+    .project-item img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease-in-out;
+      display: block;
+      transition: transform 0.3s ease; /* 添加过渡效果 */
+      border-radius: 8px; /* 确保图片有正确的圆角 */
     }
-    .portfolio-item:hover img {
-      transform: scale(1.1);
+    
+    .project-item:hover img {
+      transform: scale(1.05); /* 鼠标悬停时图片放大 */
+    }
+    
+    .project-description {
+      background-color: #f9f9f9;
+      padding: 20px;
+      grid-column: 2;
+      grid-row: 1/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      border-radius: 8px; /* 与图片保持一致的圆角 */
+    }
+    
+    .project-description h4 {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+    
+    .project-description p {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.6;
+    }
+    
+    .view-more {
+      text-align: right;
+      margin-top: 20px;
+    }
+    
+    .view-more-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      color: #666;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .view-more-btn img {
+      width: 16px;
+      height: 16px;
+      margin-left: 5px;
     }
 
     /************* 更多案例展示 *************/
     .more-cases {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 40px;
+      padding: 50px 10%;
     }
-
-    /************* Personal updates 部分 *************/
-    .personal-updates {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .personal-update-item {
-      width: 30%;
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .personal-update-item h4 {
+    
+    .more-cases-title {
       font-size: 16px;
-      color: #ee3b36;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .case-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px; /* 确保案例图片有正确的圆角 */
+      aspect-ratio: 1/1; /* 保持正方形比例 */
+    }
+    
+    .case-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 确保图片填充整个容器但不失真 */
+      display: block;
+      transition: transform 0.3s ease;
+      border-radius: 8px; /* 确保图片有正确的圆角 */
+    }
+    
+    .case-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    /************* Personal updates 部分 *************/
+    .updates-section {
+      padding: 50px 10%;
+      text-align: center;
+    }
+    
+    .updates-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    
+    .updates-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-bottom: 40px;
+    }
+    
+    .update-item {
+      position: relative;
+    }
+    
+    .update-item img {
+      width: 100%;
+      border-radius: 8px; /* 与其他图片保持一致的圆角 */
+      margin-bottom: 15px;
+      aspect-ratio: 1/1; /* 保持正方形比例 */
+      object-fit: cover;
+    }
+    
+    .update-date {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+    
+    .update-title {
+      font-size: 14px;
+      color: #333;
       margin-bottom: 10px;
     }
-    .personal-update-item p {
-      font-size: 14px;
+    
+    .update-description {
+      font-size: 12px;
       color: #888;
+      line-height: 1.6;
+    }
+
+    /************* Thank you for watching 部分 *************/
+    .thank-you {
+      padding: 30px 10%;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .thank-you-btn {
+      display: inline-block;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .thank-you-btn:hover {
+      background-color: #555;
     }
 
     /************* 底部区域 *************/
@@ -240,7 +368,8 @@
         <li>点击邮箱联系——></li>
         <li>
           <a class="email-link" href="mailto:ouhuayang@outlook.com" target="_blank">
-            <img src="https://r2u.469821.xyz/mail-ai-fill.png" alt="Email Icon" style="vertical-align:middle; width:20px; height:20px;"> Email
+            <!-- Email 链接按钮 -->
+            <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Email Icon" style="vertical-align:middle; width:20px; height:20px;"> Email
           </a>
         </li>
       </ul>
@@ -250,7 +379,7 @@
   <!-- 第一屏：人物大图 + 姓名 + 介绍 -->
   <section class="main-section">
     <div class="profile-photo">
-      <img src="https://r2u.469821.xyz/BIGFA_标准头像.png">
+      <img src="https://r2u.469821.xyz/OWLEYE02.png">
     </div>
     <div class="profile-name">
       <h1>BIGFA</h1>
@@ -265,16 +394,17 @@
 
     <!-- 联系方式区块 -->
     <div class="contact-info">
+      <h3>Contact Information</h3>
       <h2>欢迎联系我</h2>
       <div class="contact-info-content">
         <p>
-          <img src="https://r2u.469821.xyz/phone-line01.png" alt="Phone Icon"> 
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Phone Icon"> 
           13450532802 
           <span>|</span>
-          <img src="https://r2u.469821.xyz/mail-ai-line01.png" alt="Email Icon"> 
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Email Icon"> 
           ouhuayang@outlook.com 
           <span>|</span>
-          <img src="https://r2u.469821.xyz/wechat-2-line01.png" alt="Other Icon"> 
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Other Icon"> 
           bigfa0220
         </p>
       </div>
@@ -282,44 +412,144 @@
   </section>
 
   <!-- 作品集图片展示 -->
-  <section class="portfolio">
-    <!-- 示例作品 -->
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/280x300" alt="Project 1">
+  <section class="portfolio-section">
+    <!-- 项目一 -->
+    <div class="portfolio-project">
+      <div class="project-title">项目名称</div>
+      <div class="project-grid">
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="项目展示图">
+        </div>
+        <div class="project-description">
+          <h4>项目描述标题</h4>
+          <p>这里是项目的详细描述。您可以在这里介绍项目的背景、目标、您的贡献以及最终成果。尽量使用简洁明了的语言描述项目的独特之处和价值。</p>
+          <div class="view-more">
+            <button class="view-more-btn">
+              查看更多 <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="箭头">
+            </button>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="项目展示图">
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="项目展示图">
+        </div>
+      </div>
     </div>
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/280x300" alt="Project 2">
+    
+    <!-- 项目二 -->
+    <div class="portfolio-project">
+      <div class="project-title">项目名称</div>
+      <div class="project-grid">
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="项目展示图">
+        </div>
+        <div class="project-description">
+          <h4>项目描述标题</h4>
+          <p>这里是项目的详细描述。您可以在这里介绍项目的背景、目标、您的贡献以及最终成果。尽量使用简洁明了的语言描述项目的独特之处和价值。</p>
+          <div class="view-more">
+            <button class="view-more-btn">
+              查看更多 <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="箭头">
+            </button>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="项目展示图">
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="项目展示图">
+        </div>
+      </div>
     </div>
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/280x300" alt="Project 3">
+
+    <!-- 项目三 -->
+    <div class="portfolio-project">
+      <div class="project-title">项目名称</div>
+      <div class="project-grid">
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="项目展示图">
+        </div>
+        <div class="project-description">
+          <h4>项目描述标题</h4>
+          <p>这里是项目的详细描述。您可以在这里介绍项目的背景、目标、您的贡献以及最终成果。尽量使用简洁明了的语言描述项目的独特之处和价值。</p>
+          <div class="view-more">
+            <button class="view-more-btn">
+              查看更多 <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="箭头">
+            </button>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="项目展示图">
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="项目展示图">
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 更多案例展示 -->
   <section class="more-cases">
-    <!-- 更多案例 -->
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/280x300" alt="Project 4">
+    <div class="more-cases-title">更多案例</div>
+    <div class="cases-grid">
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="案例展示">
+      </div>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="案例展示">
+      </div>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="案例展示">
+      </div>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="案例展示">
+      </div>
     </div>
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/280x300" alt="Project 5">
+    <div class="cases-grid">
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="案例展示">
+      </div>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="案例展示">
+      </div>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="案例展示">
+      </div>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="案例展示">
+      </div>
     </div>
   </section>
 
   <!-- Personal updates 部分 -->
-  <section class="personal-updates">
-    <div class="personal-update-item">
-      <h4>Update 1</h4>
-      <p>Some recent updates...</p>
+  <section class="updates-section">
+    <div class="updates-title">PERSONAL UPDATES</div>
+    <div class="updates-grid">
+      <div class="update-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="更新内容">
+        <div class="update-date">2025/02/20</div>
+        <div class="update-title">更新标题</div>
+        <div class="update-description">这里是更新的简短描述，可以介绍最新的项目、活动或者个人动态等。</div>
+      </div>
+      <div class="update-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="更新内容">
+        <div class="update-date">2025/02/15</div>
+        <div class="update-title">更新标题</div>
+        <div class="update-description">这里是更新的简短描述，可以介绍最新的项目、活动或者个人动态等。</div>
+      </div>
+      <div class="update-item">
+        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="更新内容">
+        <div class="update-date">2025/02/10</div>
+        <div class="update-title">更新标题</div>
+        <div class="update-description">这里是更新的简短描述，可以介绍最新的项目、活动或者个人动态等。</div>
+      </div>
     </div>
-    <div class="personal-update-item">
-      <h4>Update 2</h4>
-      <p>Some recent updates...</p>
-    </div>
-    <div class="personal-update-item">
-      <h4>Update 3</h4>
-      <p>Some recent updates...</p>
-    </div>
+  </section>
+    
+  <!-- Thank you for watching 部分 -->
+  <section class="thank-you">
+    <a href="#" class="thank-you-btn">THANK YOU FOR WATCHING</a>
   </section>
 
   <!-- 底部区域 -->
