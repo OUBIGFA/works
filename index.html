@@ -157,6 +157,8 @@
     /* 作品集部分的整体容器样式 */
     .portfolio-section {
       padding: 50px 10%;/* 上下内边距，左右内边距为容器宽度的百分比 */
+      max-width: 1200px; /* 添加最大宽度限制 */
+      margin: 0 auto; /* 使容器居中 */
     }
 
     /* 每个作品集项目的样式 */
@@ -167,7 +169,7 @@
     /* 项目标题样式 */
     .project-title {
       margin-bottom: 20px;/* 标题下方的间距 */
-      font-size: 30px;/* 标题字体大小 */
+      font-size: 20px;/* 标题字体大小 */
       font-weight: bold;/* 标题字体粗细 */
       color: #333;/* 标题颜色为深灰色 */
     }
@@ -241,8 +243,8 @@
 
     /* 所有项目图片的通用样式 */
     .project-item img {
-      width: 60%;/* 图片宽度为容器的百分比 */
-      height: 60%;/* 图片高度为容器的百分比 */
+      width: 100%;/* 图片宽度为容器的百分比 */
+      height: 100%;/* 图片高度为容器的百分比 */
       object-fit: cover;/* 图片等比例缩放并填充容器 */
       display: block;/* 设置为块级元素 */
       transition: transform 0.3s ease;/* 添加变换过渡效果，持续0.3秒 */
