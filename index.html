@@ -65,7 +65,7 @@
       text-align: center;
     }
     .profile-photo img {
-      max-width: 550px;
+      max-width: 120px;
       border-radius: 4px;
     }
     .profile-name {
@@ -152,103 +152,187 @@
 
     /************* 作品集图片展示 *************/
     .portfolio-section {
-      padding: 40px 10%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      padding: 50px 10%;
     }
-    .portfolio-row {
-      width: 100%;
-      display: flex;
-      margin-bottom: 40px;
-      gap: 20px;
+    
+    .portfolio-project {
+      margin-bottom: 100px; /* 确保项目之间有足够距离 */
     }
-    .portfolio-large {
-      flex: 2;
-      position: relative;
+    
+    .project-title {
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
     }
-    .portfolio-small {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
     }
-    .portfolio-item {
+    
+    .project-item {
       position: relative;
       overflow: hidden;
       border-radius: 4px;
     }
-    .portfolio-item img {
+    
+    .project-item img {
       width: 100%;
       display: block;
+      transition: transform 0.3s ease; /* 添加过渡效果 */
+    }
+    
+    .project-item:hover img {
+      transform: scale(1.05); /* 鼠标悬停时图片放大 */
+    }
+    
+    .project-description {
+      background-color: #f9f9f9;
+      padding: 20px;
+      grid-column: 2;
+      grid-row: 1/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
       border-radius: 4px;
-      transition: transform 0.3s ease;
     }
-    .portfolio-item:hover img {
-      transform: scale(1.05);
-    }
-    .portfolio-description {
-      margin-top: 10px;
-    }
-    .portfolio-description h4 {
+    
+    .project-description h4 {
       font-size: 14px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      color: #666;
     }
-    .portfolio-description p {
+    
+    .project-description p {
       font-size: 12px;
       color: #888;
       line-height: 1.6;
     }
-    .portfolio-grid {
-      display: flex;
-      gap: 10px;
+    
+    .view-more {
+      text-align: right;
+      margin-top: 20px;
+    }
+    
+    .view-more-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      color: #666;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .view-more-btn img {
+      width: 16px;
+      height: 16px;
+      margin-left: 5px;
+    }
+
+    /************* 更多案例展示 *************/
+    .more-cases {
+      padding: 50px 10%;
+    }
+    
+    .more-cases-title {
+      font-size: 16px;
+      font-weight: bold;
       margin-bottom: 20px;
     }
-    .portfolio-grid-item {
-      flex: 1;
+    
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .case-item {
       position: relative;
       overflow: hidden;
+      border-radius: 4px;
     }
-    .portfolio-grid-item img {
+    
+    .case-item img {
       width: 100%;
       display: block;
-      border-radius: 4px;
       transition: transform 0.3s ease;
     }
-    .portfolio-grid-item:hover img {
+    
+    .case-item:hover img {
       transform: scale(1.05);
     }
     
-    /* 新闻部分 */
-    .news-section {
-      padding: 20px 10% 60px;
+    /************* Personal updates 部分 *************/
+    .updates-section {
+      padding: 50px 10%;
       text-align: center;
     }
-    .news-section h2 {
-      font-size: 24px;
+    
+    .updates-title {
+      font-size: 18px;
+      font-weight: bold;
       margin-bottom: 30px;
+      text-transform: uppercase;
     }
-    .news-grid {
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
+    
+    .updates-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-bottom: 40px;
     }
-    .news-item {
-      flex: 1;
-      text-align: left;
+    
+    .update-item {
+      position: relative;
     }
-    .news-item img {
+    
+    .update-item img {
       width: 100%;
-      border-radius: 4px;
+      border-radius: 8px;
       margin-bottom: 15px;
     }
-    .news-item h3 {
-      font-size: 16px;
+    
+    .update-date {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+    
+    .update-title {
+      font-size: 14px;
+      color: #333;
       margin-bottom: 10px;
     }
-    .news-item p {
-      font-size: 14px;
+    
+    .update-description {
+      font-size: 12px;
       color: #888;
+      line-height: 1.6;
+    }
+
+    /************* Thank you for watching 部分 *************/
+    .thank-you {
+      padding: 30px 10%;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .thank-you-btn {
+      display: inline-block;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .thank-you-btn:hover {
+      background-color: #555;
     }
 
     /************* 底部区域 *************/
@@ -320,157 +404,145 @@
     </div>
   </section>
 
-  <!-- 第二屏：作品集图片展示 第一行 -->
+  <!-- 作品集图片展示 -->
   <section class="portfolio-section">
-    <div class="portfolio-row">
-      <div class="portfolio-large">
-        <div class="portfolio-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="DNEG">
+    <!-- 项目一 -->
+    <div class="portfolio-project">
+      <div class="project-title">项目名称</div>
+      <div class="project-grid">
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/project1-1.jpg" alt="项目展示图">
+        </div>
+        <div class="project-description">
+          <h4>项目描述标题</h4>
+          <p>这里是项目的详细描述。您可以在这里介绍项目的背景、目标、您的贡献以及最终成果。尽量使用简洁明了的语言描述项目的独特之处和价值。</p>
+          <div class="view-more">
+            <button class="view-more-btn">
+              查看更多 <img src="https://r2u.469821.xyz/arrow-right.png" alt="箭头">
+            </button>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/project1-2.jpg" alt="项目展示图">
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/project1-3.jpg" alt="项目展示图">
         </div>
       </div>
-      <div class="portfolio-small">
-        <div class="portfolio-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Design Work">
+    </div>
+    
+    <!-- 项目二 -->
+    <div class="portfolio-project">
+      <div class="project-title">项目名称</div>
+      <div class="project-grid">
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/project1-1.jpg" alt="项目展示图">
         </div>
-        <div class="portfolio-description">
-          <h4>设计</h4>
-          <p>这里是对设计作品的简短描述，根据截图风格，这里可以放置一些关于这个项目的背景、目标或者成果的简介。文字不宜太多，保持简洁明了。</p>
+        <div class="project-description">
+          <h4>项目描述标题</h4>
+          <p>这里是项目的详细描述。您可以在这里介绍项目的背景、目标、您的贡献以及最终成果。尽量使用简洁明了的语言描述项目的独特之处和价值。</p>
+          <div class="view-more">
+            <button class="view-more-btn">
+              查看更多 <img src="https://r2u.469821.xyz/arrow-right.png" alt="箭头">
+            </button>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/project1-2.jpg" alt="项目展示图">
+        </div>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/project1-3.jpg" alt="项目展示图">
         </div>
       </div>
     </div>
 
-    <div class="portfolio-grid">
-      <div class="portfolio-grid-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Airbnb">
-      </div>
-      <div class="portfolio-grid-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Eurostar">
-      </div>
-      <div class="portfolio-grid-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Orangetheory">
-      </div>
-    </div>
-
-    <!-- 第二行作品展示 -->
-    <div class="portfolio-row">
-      <div class="portfolio-large">
-        <div class="portfolio-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="DNEG">
+    <!-- 项目三 -->
+    <div class="portfolio-project">
+      <div class="project-title">项目名称</div>
+      <div class="project-grid">
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/project1-1.jpg" alt="项目展示图">
         </div>
-      </div>
-      <div class="portfolio-small">
-        <div class="portfolio-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Design Work">
+        <div class="project-description">
+          <h4>项目描述标题</h4>
+          <p>这里是项目的详细描述。您可以在这里介绍项目的背景、目标、您的贡献以及最终成果。尽量使用简洁明了的语言描述项目的独特之处和价值。</p>
+          <div class="view-more">
+            <button class="view-more-btn">
+              查看更多 <img src="https://r2u.469821.xyz/arrow-right.png" alt="箭头">
+            </button>
+          </div>
         </div>
-        <div class="portfolio-description">
-          <h4>设计</h4>
-          <p>这里是对设计作品的简短描述，根据截图风格，这里可以放置一些关于这个项目的背景、目标或者成果的简介。文字不宜太多，保持简洁明了。</p>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/project1-2.jpg" alt="项目展示图">
         </div>
-      </div>
-    </div>
-
-    <div class="portfolio-grid">
-      <div class="portfolio-grid-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Airbnb">
-      </div>
-      <div class="portfolio-grid-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Eurostar">
-      </div>
-      <div class="portfolio-grid-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Orangetheory">
-      </div>
-    </div>
-
-    <!-- 第三行作品展示 -->
-    <div class="portfolio-row">
-      <div class="portfolio-large">
-        <div class="portfolio-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Outline">
-        </div>
-        <div class="portfolio-description">
-          <h4>Spotify Queue</h4>
-        </div>
-      </div>
-      <div class="portfolio-small">
-        <div class="portfolio-grid-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Stars">
-        </div>
-        <div class="portfolio-description">
-          <h4>Stars In Korea</h4>
-        </div>
-        <div class="portfolio-grid-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Stadium">
-        </div>
-        <div class="portfolio-description">
-          <h4>Van Alen Stadium</h4>
-        </div>
-        <div class="portfolio-grid-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="University">
-        </div>
-        <div class="portfolio-description">
-          <h4>Columbia University <span style="color:#ee3b36;">Architecture</span></h4>
-        </div>
-      </div>
-    </div>
-
-    <!-- 第四行作品展示 -->
-    <div class="portfolio-row">
-      <div class="portfolio-large">
-        <div class="portfolio-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Outline">
-        </div>
-        <div class="portfolio-description">
-          <h4>Spotify Queue</h4>
-        </div>
-      </div>
-      <div class="portfolio-small">
-        <div class="portfolio-grid-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Stars">
-        </div>
-        <div class="portfolio-description">
-          <h4>Stars In Korea</h4>
-        </div>
-        <div class="portfolio-grid-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Stadium">
-        </div>
-        <div class="portfolio-description">
-          <h4>Van Alen Stadium</h4>
-        </div>
-        <div class="portfolio-grid-item">
-          <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="University">
-        </div>
-        <div class="portfolio-description">
-          <h4>Columbia University <span style="color:#ee3b36;">Architecture</span></h4>
+        <div class="project-item">
+          <img src="https://r2u.469821.xyz/project1-3.jpg" alt="项目展示图">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 新闻部分 -->
-  <section class="news-section">
-    <h2>News</h2>
-    <div class="news-grid">
-      <div class="news-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Computer">
-        <h3>Our Computer Network Training</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales consequat erat.</p>
+  <!-- 更多案例展示 -->
+  <section class="more-cases">
+    <div class="more-cases-title">更多案例</div>
+    <div class="cases-grid">
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/case1.jpg" alt="案例展示">
       </div>
-      <div class="news-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Work">
-        <h3>How to explore the world of work</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales consequat erat.</p>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/case2.jpg" alt="案例展示">
       </div>
-      <div class="news-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Designer">
-        <h3>Designer employment opportunities</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales consequat erat.</p>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/case3.jpg" alt="案例展示">
       </div>
-      <div class="news-item">
-        <img src="https://r2u.469821.xyz/OWLEYE02.png" alt="Remote">
-        <h3>What is remote working?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales consequat erat.</p>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/case4.jpg" alt="案例展示">
       </div>
     </div>
+    <div class="cases-grid">
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/case5.jpg" alt="案例展示">
+      </div>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/case6.jpg" alt="案例展示">
+      </div>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/case7.jpg" alt="案例展示">
+      </div>
+      <div class="case-item">
+        <img src="https://r2u.469821.xyz/case8.jpg" alt="案例展示">
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal updates 部分 -->
+  <section class="updates-section">
+    <div class="updates-title">PERSONAL UPDATES</div>
+    <div class="updates-grid">
+      <div class="update-item">
+        <img src="https://r2u.469821.xyz/update1.jpg" alt="更新内容">
+        <div class="update-date">2025/02/20</div>
+        <div class="update-title">更新标题</div>
+        <div class="update-description">这里是更新的简短描述，可以介绍最新的项目、活动或者个人动态等。</div>
+      </div>
+      <div class="update-item">
+        <img src="https://r2u.469821.xyz/update2.jpg" alt="更新内容">
+        <div class="update-date">2025/02/15</div>
+        <div class="update-title">更新标题</div>
+        <div class="update-description">这里是更新的简短描述，可以介绍最新的项目、活动或者个人动态等。</div>
+      </div>
+      <div class="update-item">
+        <img src="https://r2u.469821.xyz/update3.jpg" alt="更新内容">
+        <div class="update-date">2025/02/10</div>
+        <div class="update-title">更新标题</div>
+        <div class="update-description">这里是更新的简短描述，可以介绍最新的项目、活动或者个人动态等。</div>
+      </div>
+    </div>
+  </section>
+    
+  <!-- Thank you for watching 部分 -->
+  <section class="thank-you">
+    <a href="#" class="thank-you-btn">THANK YOU FOR WATCHING</a>
   </section>
 
   <!-- 底部区域 -->
